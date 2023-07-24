@@ -101,37 +101,112 @@ const summation = (array) => {
     }
     return sum
 }
-console.log(summation(addThese1))
+//console.log(summation(addThese1))
 
-// const addThese2 = []
+const addThese2 = []
+//console.log(summation(addThese2))
 // // output: 0
+
 // Create a function that takes in an array of numbers and returns the index of the largest number.
-// const indexHighestNumber = [1, 4, 2, 3]
+//pseudocode
+//create a function that takes an array as parameter
+//create a variable and assign to 0
+//loop through array
+    //if number is greater than assigned variable
+        //reassign number to variable
+//return index of largest number
+const largestIndex = (arr) => {
+    let largest = 0;
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] > largest){
+            largest = arr[i]
+        }
+    }
+    return arr.indexOf(largest)
+}
+
+const indexHighestNumber = [1, 4, 2, 3]
+//console.log(largestIndex(indexHighestNumber))
 // // output: 1
+
 // 🏔 Stretch Goals
 // Create a function that takes in two arrays and returns one array with no duplicate values.
-// const arr1 = [3, 7, 10, 5, 4, 3, 3]
-// const arr2 = [7, 8, 2, 3, 1, 5, 4]
+//pseudocode
+//create a function with two arrays as parameters
+//create a variable and assign it to two arrays combined using concat
+//create an empty array []
+//loop through combined array
+    //if empty array does not have a duplicate number from combined array
+        //push number into empty array
+//return new array
+const noDuplicate = (array1, array2) => {
+    let combined = array1.concat(array2)
+    let newArr = []
+    for (let i = 0; i < combined.length; i++){
+        if (!newArr.includes(combined[i])){
+            newArr.push(combined[i])
+        }
+    }
+    return newArr
+}
+
+const arr1 = [3, 7, 10, 5, 4, 3, 3]
+const arr2 = [7, 8, 2, 3, 1, 5, 4]
+//console.log(noDuplicate(arr1, arr2))
 // // output: [3, 7, 10, 5, 4, 8, 2, 1]
+
 // Create a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
+//pseudocode
+//create a function with two numbers as parameters
+//create an empty array
+//use a for loop starting from 0 to num1
+    //push num2 into empty array
+//return new array
+const filledArray = (num1, num2) => {
+    let newArr = [];
+    for (let i = 0; i < num1; i++){
+        newArr.push(num2)
+    }
+    return newArr
+}
+
 // const arrayLength = 6
 // const arrayValue = 0
+// console.log(filledArray(arrayLength, arrayValue))
 // // output: [0, 0, 0, 0, 0, 0]
 
 // const arrayLength = 4
 // const arrayValue = 11
+// console.log(filledArray(arrayLength, arrayValue))
 // // output: [11, 11, 11, 11]
+
 // Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function.
-// const addUp1 = 4
+//create a function with number as parameter
+//create a sum variable and assign it to 0
+//use a for loop starting from 1 to number
+    //add each number to sum
+//return sum
+const total = (num) => {
+    let sum = 0;
+    for (let i = 1; i <= num; i++){
+        sum += i;
+    }
+    return sum;
+}
+
+//const addUp1 = 4
+//console.log(total(addUp1))
 // // 1 + 2 + 3 + 4 = 10
 // // output: 10
 
 // const addUp2 = 10
+// console.log(total(addUp2))
 // // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55
 // // output: 55
 
 // const addUp3 = 600
 // // output: 180300
+
 // 🏔 Epic Goals
 // Create a function called highLow that takes in a number and returns whether the number is higher or lower than the "answer".
 // Create an HTML page and link your JavaScript file. More info here.
