@@ -114,14 +114,60 @@ const stressedOrNot = (str) => {
 // Write the test for a function called rick that returns "Morty".
     // Create the function that will make the test pass.
 
+    describe("rick", () => {
+        it("returns 'Morty'", () => {
+            expect(rick()).toEqual("Morty")
+        }) 
+    })
+
+    const rick = () => {
+        return "Morty"
+    }
+
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
     // Create the function that will make the test pass.
+
+describe("greeter", () => {
+    it("returns a greeting with that name to the screen.", () => {
+        let name = "Jerry"
+      expect(greeter(name)).toEqual(`Hi ${name}`)  
+    })
+})
+
+const greeter = (string) => {
+    return `Hi ${string}` 
+}
 
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
     // Create the function that will make the test pass.
 
+describe("oddOrEven", () => {
+    it("returns a number as an argument and logs whether the number is odd or even.", () => {
+        expect(oddOrEven(5)).toEqual("Number is odd")
+        expect(oddOrEven(8)).toEqual("Number is even")
+    })
+})
+
+const oddOrEven = (num) => {
+    if (num % 2 !== 0){
+        return "Number is odd"
+    }else {
+        return "Number is even"
+    }
+}
+
 // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
     // Create the function that will make the test pass.
+
+    describe("doubler", () => {
+        it("returns the result of the number multiplied by 2", () => {
+
+            expect(doubler(4)).toEqual(8)}
+    })
+
+    const doubler = (num) => {
+        return num * 2
+    }
 
 // Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
     // Create the function that will make the test pass.
