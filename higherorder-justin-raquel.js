@@ -53,8 +53,19 @@ console.log(lionKing(timon))
 
 
 // Create a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: Use the typeof operator.
-// const comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
+const comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
 // // output: "nicework"
+const wordSymbols= []
+const numRemove = (array)  => {
+    for (let i = 0; i < comboArr.length; i ++) {
+        if(typeof (comboArr[i] === "string")){
+         wordSymbols.push(comboArr[i])
+        }
+    } return wordSymbols
+}
+console.log(wordSymbols)
+
+
 // Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
 // const filterArrayValues = [58, "", "abcd", true, null, false, 0]
 // // output: [58, "abcd", true]
