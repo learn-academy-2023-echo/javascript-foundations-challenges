@@ -244,7 +244,41 @@ const fizzbuzz = (num) => {
 }
 
 //Create a function that takes in an array and returns a new array with all numbers multiplied by 5.
+//input: array
+//output: new array with numbers multiplied by 5
+describe("timesFive", () => {
+    it("returns a new array with numbers multiplied by 5", () => {
+        const array1 = [2, 3, 6, 12, 20]
+        expect(timesFive(array1)).toEqual([10, 15, 30, 60, 100])
+    })
+})
+
+const timesFive = (arr) => { 
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++){ 
+        newArr.push(arr[i] * 5)
+    }
+    return newArr; 
+}
 
 //Create a function that takes in an array and returns a new array with only the even numbers.
+//input: array
+//output: new array with only even numbers
+describe("evenArray", () => {
+    it("returns new array with only even numbers", () => {
+        const array1 = [2, 5, 12, 24, 37, 57, 82, 90]
+        expect(evenArray(array1)).toEqual([2, 12, 24, 82, 90])
+    })
+})
 
-//Create a function that takes in an array and returns a new array with only the even numbers.
+const evenArray = (arr) => {
+    let evenArr = [];
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] % 2 === 0){
+            evenArr.push(arr[i])
+        }
+    }
+    return evenArr; 
+}
+
+//Create a function that takes in a string of multiple words and returns an array with only the words that have an odd number of characters.
