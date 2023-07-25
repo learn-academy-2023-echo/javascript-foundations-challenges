@@ -55,6 +55,7 @@ const stressedOrNot = (str) => {
 
 // Write the test for a function that takes in two numbers and returns the smaller number.
     // Create the function that will make the test pass.
+
     //Input: num1 and num2. num1 =5 num2 =10
     //Output: num1 (5)
 
@@ -69,18 +70,46 @@ const stressedOrNot = (str) => {
     const smallerNum = (num1, num2) => {
         if (num1 < num2){
             return num1
-        }else {
-            return (num2)
+        }else{
+            return num2
         }
     }
 
-
-
 // Write the test for a function that takes in one numbers and returns whether the number is odd.
     // Create the function that will make the test pass.
+    
+    describe("isThisOdd", () => {
+        it("returns whether the number is odd", () => {
+            expect(isThisOdd(3)).toEqual("yes, this is odd")
+        })
+    })
+
+    const isThisOdd = (num) => {
+        if (num % 2 !== 0){
+            return "yes, this is odd"
+        }
+    }
 
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
     // Create the function that will make the test pass.
+
+    describe("whatColor", () => {
+        it("returns 'yellow' if the argument is banana, 'red' if apple and 'purple' if grape.", () => {
+            expect(whatColor("banana")).toEqual("yellow")
+            expect(whatColor("apple")).toEqual("red")
+            expect(whatColor("grape")).toEqual("purple")
+        })
+    })
+
+    const whatColor = (fruit) => {
+        if (fruit === "banana"){
+            return "yellow"
+        } else if (fruit === "apple"){
+            return "red"
+        } else if (fruit === "grape"){
+            return "purple"
+        }
+    }
 
 // Write the test for a function called rick that returns "Morty".
     // Create the function that will make the test pass.
