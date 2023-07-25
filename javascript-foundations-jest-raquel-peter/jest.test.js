@@ -242,3 +242,9 @@ const fizzbuzz = (num) => {
         return "buzz"
     }
 }
+
+//Create a function that takes in an array and returns a new array with all numbers multiplied by 5.
+
+//Create a function that takes in an array and returns a new array with only the even numbers.
+
+//Create a function that takes in an array and returns a new array with only the even numbers.
