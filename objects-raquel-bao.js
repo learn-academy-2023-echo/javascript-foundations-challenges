@@ -50,10 +50,10 @@ const lunch = {
 // }
 //console.log(forLunch(lunch))
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
-lunch.forLunch = function (obj) {
-    return "The ingredients for a " + obj.name + " " + obj.type + " are " + obj.ingredients.join(", ")
-}
-console.log(lunch.forLunch(lunch))
+// lunch.forLunch = function (obj) {
+//     return "The ingredients for a " + obj.name + " " + obj.type + " are " + obj.ingredients.join(", ")
+// }
+// console.log(lunch.forLunch(lunch))
 // Consider this variable:
 
 // const animals = [
@@ -63,24 +63,55 @@ console.log(lunch.forLunch(lunch))
 //   { name: "Hank", type: "cat", age: 11 }
 // ]
 // Create a function that takes in an array of animal objects and returns a new array with only the objects that are cats.
+// const onlyCats = (obj) => {
+//   return obj.filter(value => {
+//     if (value.type === "cat"){
+//       return value
+//     }
+//   })
+// }
+
+//output: [{ name: "Fluffy", type: "cat", age: 14 }, { name: "Hank", type: "cat", age: 11 }]
+//output: ["Fluffy", "Hank"] //*****
+// console.log(onlyCats(animals))
+
 // Create a function that takes in an array of animal objects and returns a new array with only the names of the animals.
+// const onlyNames = (animalsObj) => {
+//   return animalsObj.map((value) => value = value.name)
+// }
+// console.log(onlyNames(animals))
+
 // Create a function that takes in an array of animal objects and returns a new array of the names of the animals that are more than 10 years old.
+// const greaterThan10YO = (obj) => {
+//   let outcome = obj.filter(value => value.age > 10)
+//   return outcome.map(value => value.name) 
+// }
+// console.log(greaterThan10YO(animals))
+
 // Create a function that takes in an array of animal objects and returns a new array with a sentence about each animal.
+// const animalWord = (arr) => {
+//   return arr.map(value => value = "I am " + value.type + " and I am " + value.age + " years old. My name is " + value.name + "." )
+// }
+// console.log(animalWord(animals))
 // Consider this variable:
 
-// const author = {
-//   name: "H. G. Wells",
-//   genre: "science fiction"
-// }
+const author = {
+  name: "H. G. Wells",
+  genre: "science fiction"
+}
+
 // Write the code that destructures the author object so that the following code snippet will run successfully:
+// const {name , genre} = author
 // console.log(`${name} is a ${genre} author`)
-// // output: "H. G. Wells is a science fiction author"
+// output: "H. G. Wells is a science fiction author"
 // Consider this variable:
 
-// const pokeOne = {
-//   species: "Charmandar",
-//   pokemon_type: "Fire"
-// }
+const pokeOne = {
+  species: "Charmandar",
+  pokemon_type: "Fire"
+}
+// const { species, pokemon_type } = pokeOne
+// console.log(`${species} is ${pokemon_type} type`) //=====> "Charmander is Fire type"
 
 // const pokeTwo = {
 //   species: "Magikarp",
