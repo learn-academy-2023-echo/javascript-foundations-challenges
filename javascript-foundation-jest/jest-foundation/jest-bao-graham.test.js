@@ -161,8 +161,8 @@ const oddOrEven = (num) => {
 
     describe("doubler", () => {
         it("returns the result of the number multiplied by 2", () => {
-
-            expect(doubler(4)).toEqual(8)}
+            expect(doubler(4)).toEqual(8)
+        })
     })
 
     const doubler = (num) => {
@@ -172,8 +172,48 @@ const oddOrEven = (num) => {
 // Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
     // Create the function that will make the test pass.
 
+    describe("multiply", () => {
+        it("logs the result of one of the numbers multiplied by the other.", () => {
+            expect(multiply(4,2)).toEqual(8)
+        })
+    })
+
+    const multiply = (num1, num2) => {
+        return num1 * num2
+    }
+
 // Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
     // Create the function that will make the test pass.
 
+    describe("divisibleBy", () => {
+        it("returns whether the first number is evenly divisible by the second", () => {
+            expect(divisibleBy(10, 5)).toEqual(10 + " is evenly divisible by " + 5)
+        })
+    })
+
+    const divisibleBy = (num1, num2) => {
+        if (num1 % num2 === 0){
+            return num1 + " is evenly divisible by " + num2
+        }
+    }
+
 // Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word "fizz". If a number is a multiple of five, replace it with the word "buzz". If a number is a multiple of both 3 and 5, replace it with "fizzbuzz".
     // Create the function that will make the test pass.
+
+    describe("fizzbuzz", () => {
+        it("If a number is a multiple of 3, replace it with the word 'fizz'. If a number is a multiple of five, replace it with the word 'buzz'. If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'", () => {
+            expect(fizzbuzz(5)).toEqual("buzz")
+            expect(fizzbuzz(3)).toEqual("fizz")
+            expect(fizzbuzz(15)).toEqual("fizzbuzz")
+        })
+    })
+
+    const fizzbuzz = (num) => {
+        if (num % 3 === 0 && num % 5 === 0){
+            return "fizzbuzz"
+        } else if ( num % 3 === 0){
+            return "fizz"
+        } else if ( num % 5 === 0){
+            return "buzz"
+        }
+    }
