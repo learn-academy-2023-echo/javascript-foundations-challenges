@@ -184,13 +184,13 @@ const learn = {
 
 // Write the code that logs the name of your cohort.
 
-// console.log(learn.cohorts['2023'][4])
+// console.log(learn.cohorts[2023][4])
 
 // Write the code that uses destructuring to log the name of your cohort.
 
 const {cohorts} = learn
 
-//console.log(cohorts['2023'][4])
+// console.log(cohorts[2023][4])
 
 // Create a function that takes an object like the one above and returns an array with a string of every cohort name and year.
 
