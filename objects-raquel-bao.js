@@ -113,14 +113,19 @@ const pokeOne = {
 // const { species, pokemon_type } = pokeOne
 // console.log(`${species} is ${pokemon_type} type`) //=====> "Charmander is Fire type"
 
-// const pokeTwo = {
-//   species: "Magikarp",
-//   pokemon_type: "Water"
-// }
+const pokeTwo = {
+  species: "Magikarp",
+  pokemon_type: "Water"
+ }
 // Create a function called describePokemon that take an object like the ones above and uses destructuring to return a description of the Pokemon so that the following code snippet will run successfully:
-// console.log(describePokemon(pokeOne))
+const describePokemon = (obj) => {
+const {species, pokemon_type} = obj
+  return  `${species} is ${pokemon_type}`
+}
+
+console.log(describePokemon(pokeOne))
 // // output: "Charmandar is a Fire pokemon"
-// console.log(describePokemon(pokeTwo))
+ console.log(describePokemon(pokeTwo))
 // // output: "Magikarp is a Water pokemon"
 // Consider this variable:
 
