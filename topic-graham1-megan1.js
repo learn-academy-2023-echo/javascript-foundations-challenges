@@ -17,7 +17,16 @@
 
 
 // Write a function that takes in an array of numbers and returns a new array with only odd numbers.
-// const testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
+// psuedo code: we'll use an arrow syntax to create a function / create a loop w/ a conditional defined of odd numbers / maybe use .indexOf()
+const testArr2 = [0, 2, -7, 3, 5, 8, 10, 13]
+
+const onlyOdd = (array) => {
+    let newArr = []
+    for ( let i=0; i < array.length; i++){
+    if ([i] % 0)
+
+    }
+}
 // // output: [-7, 3, 5, 13]
 // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: use the typeof method.
 // const comboArr = [
