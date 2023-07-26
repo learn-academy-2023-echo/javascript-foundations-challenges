@@ -188,9 +188,9 @@ const learn = {
 
 // Write the code that uses destructuring to log the name of your cohort.
 
-const {cohorts: { 2023: array2} } = learn;
+const {cohorts: { 2023: array2 } } = learn;
 
-//console.log(array2[4])
+// console.log(array2[4])
 
 // Create a function that takes an object like the one above and returns an array with a string of every cohort name and year.
 
