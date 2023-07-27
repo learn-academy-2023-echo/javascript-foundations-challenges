@@ -27,16 +27,16 @@ class Coffee {
     }
   }
 // Write the code that makes a black coffee object
-// let newCoffee = new Coffee("black")
+// let newCoffee1 = new Coffee("black")
 
 // Write the code that outputs the black coffee's profile
 // console.log(newCoffee)
 
 // Write the code that makes a coffee object with 1 cream and 2 sugars
-// let newCoffee = new Coffee("black", 1, 2)
+// let newCoffee2 = new Coffee("sweet", 1, 2)
 
 // Write the code that outputs the 1 cream and 2 sugars coffee profile
-// console.log(newCoffee.coffeeProfile())
+// console.log(newCoffee2.coffeeProfile())
 
 // Latte Maker: create a class for Latte
 class Latte {
@@ -54,10 +54,10 @@ class Latte {
     }
 }
 
-// let newLatte = new Latte("regular", "plain", 1)
+// let newLatte = new Latte("regular", "no", 1)
 // console.log(newLatte.latteProfile())
 
-// let hazeLatte = new Latte("hazelnut", "almond", "double")
+// let hazeLatte = new Latte("hazelnut", "almond", 2)
 // console.log(hazeLatte.latteProfile())
 
 // Write a Latte class that takes a flavor, a milk type, and a number of shots
@@ -95,3 +95,26 @@ let newCylinder = new Cylinder2(3, 8)
 // Write a class that calculates the volume of a Cylinder: v = πr^2h (r is the radius and h is the height of the cylinder)
 // Write the code that rounds the volume of the cylinder to four decimal places
 // Write the code that creates three unique cylinder objects
+
+// Consider this function:
+const combineArrays = (arrOne, arrTwo) => {
+    return arrOne.concat(arrTwo)
+  }
+  
+  console.log(combineArrays([2, 4, 2], [4, 6, 11]))
+  Refactor this function to use the spread operator to combine the arrays.
+
+// Consider this function:
+
+const combineAndFilterOdd = (arrOne, arrTwo, arrThree) => {
+    return arrOne
+      .concat(arrTwo)
+      .concat(arrThree)
+      .filter((num) => num % 2 !== 0)
+  }
+  
+ // console.log(combineAndFilterOdd([3, 2, 5], [5, 8, 7], [4, 5, 6]))
+//  Refactor this function to use the spread operator to combine the array arguments.
+
+//   Stretch Goals
+//   Recall the combineAndFilterOdd() function from the previous exercise. Refactor the function to take any number of arguments.
