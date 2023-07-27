@@ -118,14 +118,13 @@ const pokeTwo = {
   pokemon_type: "Water"
  }
 // Create a function called describePokemon that take an object like the ones above and uses destructuring to return a description of the Pokemon so that the following code snippet will run successfully:
-const describePokemon = (obj) => {
-const {species, pokemon_type} = obj
-  return  `${species} is ${pokemon_type}`
-}
+// const describePokemon = (obj) => {
+//   return  `${obj.species} is ${obj.pokemon_type} type`
+// }
 
-console.log(describePokemon(pokeOne))
-// // output: "Charmandar is a Fire pokemon"
- console.log(describePokemon(pokeTwo))
+// console.log(describePokemon(pokeOne))
+// output: "Charmandar is a Fire pokemon"
+//  console.log(describePokemon(pokeTwo))
 // // output: "Magikarp is a Water pokemon"
 // Consider this variable:
 
@@ -133,20 +132,27 @@ console.log(describePokemon(pokeOne))
 //   base: 2,
 //   height: 5
 // }
-// Modify the triangleDimensions object to have a method that returns the area of the triangle.
+// Modify the triangleDimensions object to have a method that
+//  returns the area of the triangle.
+// triangleDimensions.area = function () {
+//   return this.base * this.height
+// }
+// console.log(triangleDimensions.area())
 // Write the code that will update the base to be the value of 6.
 
+// triangleDimensions.base = 6
 
 //Stretch Goals
 
-// const learn = {
-//     cohorts: {
-//       2022: ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel"],
-//       2023: ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliet"]
-//     }
-//   }
+const learn = {
+    cohorts: {
+      2022: ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel"],
+      2023: ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliet"]
+    }
+  }
 
 //Write the code that logs the name of your cohort.
+  console.log(learn.cohorts[2023][4])
 // Write the code that logs the name of your cohort.
 // Write the code that uses destructuring to log the name of your cohort.
 // Create a function that takes an object like the one above and returns an array with a string of every cohort name and year.
