@@ -76,45 +76,63 @@ class Cylinder {
     }
     volume() {
         return Math.PI * (this.radius**2) * (this.height)
+    } 
+    surfaceArea() {
+      return (2 * Math.PI * this.radius * this.height) + (2 * Math.PI * (this.radius**2))
+    }
+    lateralArea() {
+      return (2 * Math.PI * this.radius * this.height)
     }
 }
 let newVolume = new Cylinder(5, 3)
+let weirdCyl = new Cylinder(99, 66)
+let tallCyl = new Cylinder(5, 101)
+// console.log(weirdCyl)
+// console.log(newVolume)
+// console.log(tallCyl)
 // console.log(Number(parseFloat(newVolume.volume()).toFixed(4)))
-
-class Cylinder2 {
-    constructor(radius, height){
-        this.radius = radius
-        this.height = height
-    }
-    volume() {
-        return Math.PI * (this.radius**2) * (this.height)
-    }
-}
-let newCylinder = new Cylinder2(3, 8)
-// console.log(newCylinder.volume())
 // Write a class that calculates the volume of a Cylinder: v = πr^2h (r is the radius and h is the height of the cylinder)
 // Write the code that rounds the volume of the cylinder to four decimal places
 // Write the code that creates three unique cylinder objects
 
-// Consider this function:
-const combineArrays = (arrOne, arrTwo) => {
-    return arrOne.concat(arrTwo)
-  }
+
+
+// // Consider this function:
+// const combineArrays = (arrOne, arrTwo) => {
+//     return [...arrOne, ...arrTwo]
+//   }
+// console.log(combineArrays([2, 4, 2], [4, 6, 11]))
+
+//   Refactor this function to use the spread operator to combine the arrays.
+
+// // Consider this function:
+
+// const combineAndFilterOdd = (arrOne, arrTwo, arrThree) => {
+//     return [...arrOne, ...arrTwo, ...arrThree]
+//       .filter((num) => num % 2 !== 0)
+  // }
   
-  console.log(combineArrays([2, 4, 2], [4, 6, 11]))
-  Refactor this function to use the spread operator to combine the arrays.
+//  console.log(combineAndFilterOdd([3, 2, 5], [5, 8, 7], [4, 5, 6]))
+
+// //  Refactor this function to use the spread operator to combine the array arguments.
+
+// //   Stretch Goals
+// //   Recall the combineAndFilterOdd() function from the previous exercise. Refactor the function to take any number of arguments.
 
 // Consider this function:
 
-const combineAndFilterOdd = (arrOne, arrTwo, arrThree) => {
-    return arrOne
-      .concat(arrTwo)
-      .concat(arrThree)
-      .filter((num) => num % 2 !== 0)
-  }
-  
- // console.log(combineAndFilterOdd([3, 2, 5], [5, 8, 7], [4, 5, 6]))
-//  Refactor this function to use the spread operator to combine the array arguments.
+const combineAndFilterOdd = (...arrays) => {
+  let combined = [].concat(...arrays)
+  return combined.filter((num) => num % 2 !== 0)
+}
 
-//   Stretch Goals
-//   Recall the combineAndFilterOdd() function from the previous exercise. Refactor the function to take any number of arguments.
+console.log(combineAndFilterOdd([3, 2, 5], [5, 8, 7], [4, 5, 6], [43, 78, 23, 5]))
+
+const houseItems = (...items) => {
+return items.join(" ")
+}
+console.log(houseItems("coffeemaker", "stove", "table", "couch"))
+// Refactor this function to use the spread operator to combine the array arguments.
+
+// 🏔 Stretch Goals
+// Recall the combineAndFilterOdd() function from the previous exercise. Refactor the function to take any number of arguments.
