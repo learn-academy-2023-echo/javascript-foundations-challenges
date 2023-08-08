@@ -117,6 +117,7 @@ const pokeTwo = {
   species: "Magikarp",
   pokemon_type: "Water"
 }
+
 // Create a function called describePokemon that take an object like the ones above and uses destructuring to return a description of the Pokemon so that the following code snippet will run successfully:
 
 console.log(describePokemon(pokeOne))
